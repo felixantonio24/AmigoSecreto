@@ -15,7 +15,14 @@ function agregarAmigo(){
 
     //añado el nombre a arrai para q se actualize la lista 
     amigos.push(nombre);
-    actualizarListaAAmigos();
+    actualizarListaaAmigos();
     //Limpio el campo de entrada
     inputAmigo.value = "";
+}
+
+//funcion para actualizar la lista visual de amigos
+function actualizarListaaAmigos (){
+    const listaAmigos = DocumentFragment.querySelector("#listaAmigos");
+    //limpio la lista actual
+    listaAmigos.innerHTML = "";
 }
