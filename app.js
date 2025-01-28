@@ -1,23 +1,21 @@
 // Inicializamos un array para almacenar los nombres de los amigos
-const amigos = [];
+const amigos =[];
 
-// Función para añadir un amigo al array
-function agregarAmigo() {
-    // Capturamos el valor del campo de entrada
-    const inputAmigo = document.getElementById("amigo");
-    const nombre = inputAmigo.value.trim(); // Eliminamos espacios al inicio y al final
+//funcion para usar el array 
+function agregarAmigo(){
 
-    // Validamos que el campo no esté vacío
-    if (nombre === "") {
-        alert("Por favor, inserte un nombre 😀.");
-        return; // Detenemos la ejecución de la función si está vacío
+    const inputAmigo = document.querySelector("#amigos");
+    //elimina espacios en el inicio y el final
+    const nombre = inputAmigo.ariaValueMax.trim(); 
+    //busco que el campo no este vacio 
+    if(nombre===""){
+        alert("Por favor, inserte un nombre 😀");
+        return;
     }
 
-    // Añadimos el nombre al array y actualizamos la lista visualmente
+    //añado el nombre a arrai para q se actualize la lista 
     amigos.push(nombre);
-    actualizarListaAmigos();
-
-    // Limpiamos el campo de entrada
+    actualizarListaAAmigos();
+    //Limpio el campo de entrada
     inputAmigo.value = "";
 }
-
